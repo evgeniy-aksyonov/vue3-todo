@@ -1,15 +1,18 @@
 <template>
-  <div class="todo-list">
-    <ToDoItem />
-    <ToDoItem />
-    <ToDoItem />
+  <div v-for="(todo) in allTodos" :key="todo.id" class="todo-list">
+    <ToDoItem :todo="todo" />
   </div>
 </template>
 
 <script>
 import ToDoItem from './ToDoItem.vue';
+import { mapGetters } from 'vuex';
+
 export default {
-  components: { ToDoItem }
+  components: { ToDoItem },
+  computed: {
+    ...mapGetters(['allTodos'])
+  }
 }
 </script>
 

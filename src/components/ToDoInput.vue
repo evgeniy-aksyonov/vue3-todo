@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="row">
-      <input v-model="todoText" class="col form-control" type="text" />
-      <button @click="addTodoId(todoText)" class="btn btn-primary">Add</button>
+      <input @change="todoTextChange" v-bind:value="todoText" class="col form-control" type="text" />
+      <button @click="addTodoI" class="btn btn-primary">Add</button>
     </div>
   </div>
 </template>
@@ -19,7 +19,11 @@ export default {
   },
   methods: {
     ...mapActions(['addTodo']),
-    addTodoId() {
+    todoTextChange(e) {
+      console.log('e.target.value: ', e.target.value);
+      this.todoText = e.target.value;
+    },
+    addTodoI() {
       this.addTodo({
         id: v1(),
         title: this.todoText
