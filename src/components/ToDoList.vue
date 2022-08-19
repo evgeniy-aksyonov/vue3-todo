@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="todo-list">
     <ToDoItem />
     <ToDoItem />
     <ToDoItem />
@@ -14,5 +14,8 @@ export default {
 </script>
 
 <style>
-  
+.todo-list {
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+}
 </style>
