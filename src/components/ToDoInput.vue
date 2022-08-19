@@ -20,7 +20,6 @@ export default {
   methods: {
     ...mapActions(['addTodo']),
     todoTextChange(e) {
-      console.log('e.target.value: ', e.target.value);
       this.todoText = e.target.value;
     },
     addTodoI() {

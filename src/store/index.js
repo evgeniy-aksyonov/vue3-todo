@@ -27,6 +27,18 @@ export default createStore({
     delete_todo(state, id) {
       state.todos = state.todos.filter((t) => t.id !== id);
     },
+    update_todo(state, todo) {
+      console.log('BEFORE UPDATE state.todos: ', state.todos);
+
+      state.todos = state.todos.map((t) => {
+        if (t.id === todo.id) {
+          return todo;
+        }
+        return t;
+      });
+
+      console.log('AFTER UPDATE state.todos: ', state.todos);
+    },
   },
   actions: {
     addTodo({ commit }, todo) {
@@ -34,6 +46,9 @@ export default createStore({
     },
     deleteTodo({ commit }, id) {
       commit('delete_todo', id);
+    },
+    updateTodo({ commit }, todo) {
+      commit('update_todo', todo);
     },
   },
   modules: {},
