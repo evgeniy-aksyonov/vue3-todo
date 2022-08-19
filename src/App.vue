@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <div class="container">
+    <h1>To Do List</h1>
     <ToDoInput />
     <ToDoList />
   </div>
@@ -10,11 +11,11 @@ import ToDoInput from './components/ToDoInput'
 import ToDoList from './components/ToDoList';
 
 export default {
-  name: 'App',
-  components: {
-    ToDoInput,
-    ToDoList
-}
+    name: 'App',
+    components: {
+      ToDoInput,
+      ToDoList
+  }
 }
 </script>
 

@@ -1,6 +1,15 @@
 <template>
-  <div>
-    <h3>To Do Item</h3>
+  <div class="d-flex justify-content-between align-items-center my-3">
+    <!-- <div class="col"> -->
+      <span>#1</span>
+    <!-- </div> -->
+    <!-- <div class="col"> -->
+      <span>Title</span>
+    <!-- </div> -->
+    <div class="buttons">
+      <button class="btn btn-primary mx-2">Edit</button>
+      <button class="btn btn-danger">Delete</button>
+    </div>
   </div>
 </template>
 <script>
